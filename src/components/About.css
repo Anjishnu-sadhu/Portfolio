@@ -1,0 +1,131 @@
+.about-section {
+  background-color: #0b0b0b;
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+  padding: 6rem 4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.about-content {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 8.5vw;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.heading-solid {
+  position: relative;
+  z-index: 1;
+}
+
+.heading-outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.text-orange {
+  color: #F44321;
+}
+
+.transparent-text {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.hidden-text {
+  color: transparent;
+}
+
+.about-image-box {
+  position: absolute;
+  top: 5vw;
+  right: 0;
+  width: 25vw;
+  height: 35vw;
+  max-width: 400px;
+  max-height: 560px;
+  background-color: #F44321;
+  border: 6px solid white;
+  z-index: 2;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+
+.about-text {
+  margin-top: 6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #a0a0a0;
+  max-width: 500px;
+  z-index: 4;
+  position: relative;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 9vw;
+  }
+  .about-image-box {
+    width: 35vw;
+    height: 45vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 2rem;
+  }
+  .heading {
+    font-size: 12vw;
+    white-space: normal;
+  }
+  .heading-outline {
+    display: none; /* simplifies mobile view */
+  }
+  .about-image-box {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    z-index: 1;
+  }
+  .about-text {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+  .about-text br {
+    display: none;
+  }
+}

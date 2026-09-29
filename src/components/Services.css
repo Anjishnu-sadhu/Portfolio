@@ -1,0 +1,158 @@
+.services-section {
+  background-color: #0b0b0b;
+  width: 100%;
+  color: white;
+  padding: 4rem 4rem 8rem 4rem;
+  box-sizing: border-box;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #222;
+}
+
+.service-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-number {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: white;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 300px;
+  z-index: 1;
+  padding-top: 1rem;
+}
+
+.service-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.service-description-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
+
+.service-row.active .service-description-wrapper {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+
+.service-description-wrapper p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a0a0a0;
+  max-width: 500px;
+  margin: 0;
+}
+
+.service-arrow {
+  flex: 0 0 100px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  z-index: 1;
+}
+
+.arrow-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-row:hover .arrow-btn {
+  border-color: white;
+}
+
+.service-row.active .arrow-btn {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+@media (max-width: 1024px) {
+  .service-number {
+    font-size: 10rem;
+    top: 0;
+  }
+  .service-content {
+    margin-left: 200px;
+  }
+  .service-content h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 2rem;
+  }
+  .service-row {
+    padding: 2rem 0;
+  }
+  .service-number {
+    font-size: 8rem;
+    top: 0.5rem;
+  }
+  .service-content {
+    margin-left: 140px;
+    padding-top: 0.5rem;
+    padding-right: 50px; 
+  }
+  .service-content h3 {
+    font-size: 1.5rem;
+  }
+  .service-arrow {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    flex: none;
+    padding-top: 0;
+  }
+  .arrow-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .service-row.active .service-description-wrapper {
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,12 @@
+.app-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hero-section-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #F44321;
+  background: radial-gradient(circle at 50% 50%, #FF5A25 0%, #D83111 100%);
+}
