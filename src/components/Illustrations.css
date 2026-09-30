@@ -1,0 +1,218 @@
+.illustrations-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(20,20,20,0.8) 0%, rgba(5,5,5,0.95) 100%),
+    url('https://www.transparenttextures.com/patterns/crumpled-paper.png');
+  background-color: #111;
+  background-blend-mode: multiply;
+  color: #ffffff;
+  padding: 6rem 2rem 4rem 2rem;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.illustrations-header {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.illustrations-logo {
+  color: var(--primary-accent, #f7a016);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.illustrations-nav {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.illustrations-graphic {
+  position: absolute;
+  z-index: 5;
+}
+
+.illustrations-graphic.top-right {
+  top: 30%;
+  right: 2%;
+}
+
+.illustrations-graphic.bottom-left {
+  bottom: 10%;
+  left: 2%;
+}
+
+.illustrations-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title setup */
+.illustrations-title-wrapper {
+  position: absolute;
+  top: -20px;
+  right: 10%;
+  z-index: 20;
+}
+
+.illustrations-title-main {
+  font-family: 'Anton', sans-serif;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.illustrations-title-cursive {
+  font-family: 'Caveat', cursive;
+  font-size: 4rem;
+  color: var(--primary-accent, #f7a016);
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  transform: rotate(-10deg);
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.line-art-boy {
+  position: absolute;
+  top: -60px;
+  left: 35%;
+  z-index: 21;
+}
+
+/* Organic Masonry Grid */
+.illustrations-grid {
+  display: flex;
+  gap: 15px;
+  margin-top: 60px;
+  position: relative;
+}
+
+.ill-col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.col-1 { flex: 0.8; margin-top: 30px; }
+.col-2 { flex: 1.2; margin-top: 60px; }
+.col-3 { flex: 2; margin-top: 80px; }
+.col-4 { flex: 1.2; margin-top: 50px; }
+
+.ill-item {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.ill-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Heights */
+.portrait-sm { height: 120px; }
+.portrait-md { height: 180px; }
+.portrait-lg { height: 250px; }
+.portrait-xl { height: 350px; }
+.tall-photo { height: 400px; }
+.wide-item { height: 200px; }
+
+/* Item Specifics */
+.mock-brown { background-color: #3b2f2f; display: flex; justify-content: center; align-items: center;}
+.brown-shape { width: 40px; height: 60px; background-color: #8b5a2b; border-radius: 5px; }
+
+.mock-photo img { filter: grayscale(30%) contrast(1.2); }
+
+.quote-box {
+  background-color: #d1bfae;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #111;
+}
+.quote-box h3 { font-family: 'Anton', sans-serif; font-size: 1.5rem; line-height: 1.2; margin: 0; }
+.quote-box span { color: #f7a016; font-size: 1.8rem; }
+
+.dark-photo {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+.neon-doodles {
+  color: #ff00ff;
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  transform: rotate(-10deg);
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.neon-circle {
+  width: 50px; height: 50px;
+  border: 3px solid #00ffff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.cartoon-boy {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  width: 60px;
+  height: 120px;
+  z-index: 20;
+}
+.c-head { width: 40px; height: 40px; background-color: #ffcdb2; border-radius: 50%; margin: 0 auto; border: 2px solid #111;}
+.c-body { width: 50px; height: 50px; background-color: #111; border-radius: 10px 10px 0 0; margin: -5px auto 0; }
+.c-legs { width: 30px; height: 40px; background-color: #eee; margin: 0 auto; border-radius: 5px; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .illustrations-title-main { font-size: 4.5rem; }
+  .illustrations-title-cursive { font-size: 3rem; right: -1rem; }
+  .illustrations-title-wrapper { top: -40px; right: 5%; }
+  .line-art-boy { left: 10%; top: -80px; }
+  .illustrations-grid { flex-wrap: wrap; }
+  .ill-col { margin-top: 20px; }
+  .col-1, .col-2 { flex: 1 1 45%; }
+  .col-3, .col-4 { flex: 1 1 45%; }
+}
+
+@media (max-width: 768px) {
+  .illustrations-header { padding: 0 2rem; }
+  .illustrations-title-wrapper { position: relative; top: 0; right: 0; text-align: center; margin-bottom: 2rem; }
+  .illustrations-title-main { font-size: 3.5rem; }
+  .line-art-boy { display: none; }
+  
+  .ill-col { flex: 1 1 100%; margin-top: 10px !important; }
+}

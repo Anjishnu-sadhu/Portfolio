@@ -1,35 +1,36 @@
-import React from 'react';
-import Header from './components/Header';
+import React, { useEffect } from 'react';
 import Hero from './components/Hero';
-import Footer from './components/Footer';
 import About from './components/About';
-import Impact from './components/Impact';
 import Skills from './components/Skills';
-import Services from './components/Services';
-import Featured from './components/Featured';
-import Projects from './components/Projects';
-import Testimonials from './components/Testimonials';
-import CTA from './components/CTA';
-import SiteFooter from './components/SiteFooter';
+import Branding from './components/Branding';
+import SocialMedia from './components/SocialMedia';
+import PrintMedia from './components/PrintMedia';
+import Illustrations from './components/Illustrations';
+import Footer from './components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: 50,
+    });
+  }, []);
+
   return (
-    <div className="app-container">
-      <div className="hero-section-wrapper">
-        <Header />
-        <Hero />
-        <Footer />
-      </div>
+    <div style={{ overflowX: 'hidden' }}>
+      <Hero />
       <About />
-      <Impact />
       <Skills />
-      <Featured />
-      <Projects />
-      <Testimonials />
-      <Services />
-      <CTA />
-      <SiteFooter />
+      <Branding />
+      <SocialMedia />
+      <PrintMedia />
+      <Illustrations />
+      <Footer />
     </div>
   );
 }

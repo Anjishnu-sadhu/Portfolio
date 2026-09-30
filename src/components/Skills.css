@@ -1,86 +1,268 @@
-.skills-section {
-  background-color: #0b0b0b;
-  width: 100%;
-  color: white;
-  padding: 8rem 4rem;
-  box-sizing: border-box;
-}
-
 .skills-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 4rem;
-}
-
-.skills-left {
-  flex: 2;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(20,20,20,0.8) 0%, rgba(5,5,5,0.95) 100%),
+    url('https://www.transparenttextures.com/patterns/crumpled-paper.png');
+  background-color: #111;
+  background-blend-mode: multiply;
+  color: #ffffff;
+  padding: 6rem 2rem 4rem 2rem;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.skills-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #a0a0a0;
+.skills-header {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
-.skills-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 4.5rem;
+.skills-logo {
+  color: var(--primary-accent, #f7a016);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.skills-nav {
+  font-size: 0.9rem;
   font-weight: 500;
-  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.skills-graphic {
+  position: absolute;
+  z-index: 5;
+}
+
+.skills-graphic.top-right {
+  top: 10%;
+  right: 5%;
+  transform: rotate(-10deg);
+}
+
+.skills-graphic.bottom-left {
+  bottom: 15%;
+  left: 5%;
+}
+
+.skills-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.skills-title-wrapper {
+  position: relative;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.skills-title-main {
+  font-family: 'Anton', sans-serif;
+  font-size: 7rem;
+  line-height: 1;
   margin: 0;
-  letter-spacing: -0.02em;
+  color: #ffffff;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 1;
 }
 
-.skills-heading .text-orange {
-  color: #F44321;
+.skills-title-cursive {
+  font-family: 'Caveat', cursive;
+  font-size: 6rem;
+  color: var(--primary-accent, #f7a016);
+  position: absolute;
+  bottom: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);
+  margin: 0;
+  white-space: nowrap;
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  font-weight: 700;
 }
 
-.skills-right {
+/* The Crumpled Paper Container */
+.paper-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  min-height: 400px;
+  background-color: #f5f5f5;
+  background-image: url('https://www.transparenttextures.com/patterns/crumpled-paper.png');
+  border-radius: 4px;
+  padding: 4rem 5rem;
+  box-sizing: border-box;
+  color: #111;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.6),
+    inset 0 0 40px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Add some rugged edges to the paper using pseudo-elements */
+.paper-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+.paper-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 5rem;
 }
 
-.skills-right p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  font-weight: 300;
-  color: #a0a0a0;
-  max-width: 320px;
+.paper-column:nth-child(2) {
+  align-items: center;
+}
+
+.paper-heading {
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
 }
 
+.skills-list li {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #222;
+}
+
+.skills-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #222;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.software-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.soft-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.soft-icon:hover {
+  transform: translateY(-10px);
+}
+
+.soft-icon.ps {
+  background-color: #001e36;
+  color: #31a8ff;
+  border: 2px solid #001e36;
+}
+
+.soft-icon.ai {
+  background-color: #330000;
+  color: #ff9a00;
+  border: 2px solid #330000;
+}
+
+.soft-icon.pr {
+  background-color: #00005c;
+  color: #d18aff;
+  border: 2px solid #00005c;
+}
+
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-  .skills-heading {
-    font-size: 3.5rem;
-  }
+  .skills-title-main { font-size: 5rem; }
+  .skills-title-cursive { font-size: 4.5rem; bottom: -2.5rem; }
+  .paper-container { padding: 3rem 2rem; }
 }
 
 @media (max-width: 768px) {
-  .skills-section {
-    padding: 4rem 2rem;
-  }
-  .skills-container {
+  .skills-header { padding: 0 2rem; }
+  .skills-title-main { font-size: 4rem; }
+  .skills-title-cursive { font-size: 3.5rem; }
+  
+  .paper-container {
     flex-direction: column;
     gap: 3rem;
+    padding: 2.5rem 1.5rem;
   }
-  .skills-heading {
-    font-size: 2.5rem;
+  
+  .paper-column {
+    align-items: center;
+    text-align: center;
   }
-  .skills-right {
-    padding-top: 0;
+  
+  .skills-list li {
+    padding-left: 0;
   }
-  .skills-right p {
-    max-width: 100%;
+  
+  .skills-list li::before {
+    display: none;
   }
+}
+
+@media (max-width: 480px) {
+  .skills-title-main { font-size: 3rem; letter-spacing: 1px; }
+  .skills-title-cursive { font-size: 2.8rem; bottom: -1.5rem; }
+  
+  .soft-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .software-icons {
+    gap: 1rem;
+  }
+  
+  .skills-graphic { display: none; }
 }
