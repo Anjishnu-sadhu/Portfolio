@@ -38,8 +38,7 @@ const About = () => {
 
         {/* Right Side: Image */}
         <div className="about-image-section" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
-          {/* We generated a photo similar to the one requested */}
-          <img src="/profile_photo.jpg" alt="Anjishnu S." className="profile-image" />
+          <img src="/profile_photo_cropped.png" alt="Anjishnu S." className="profile-image" />
           
           {/* Abstract graphic elements around image */}
           <div className="about-graphic arrow" data-aos="zoom-in" data-aos-delay="1000">
